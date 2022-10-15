@@ -1,14 +1,19 @@
 
+function listClient() {
 
-  const hola = ()=>{
-    axios({
-        method: 'get',
-        url: 'https://jsonplaceholder.typicode.com/users',
-        responseType: 'json'
-      })
-        .then(function (response) {
-          console.log(response.data);
-        });
-  }
+  var url = "../pages/content/listClient.php";
+  $.ajax({
+      url: url,
+      method: "POST",
 
-  hola();
+      success: function (respuesta) {
+
+          $(".ajax_response").html(respuesta);
+          $(".box-title").html("LISTADO DE CLIENTES");
+          // get_habitaciones();
+      },
+      error: function () {
+          console.log("No se ha podido obtener la información");
+      }
+  });
+}

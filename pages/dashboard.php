@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="//cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -121,9 +122,9 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="../../index.html" class="nav-link">
+                                    <a href="#" class="nav-link" onclick="listClient();">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Dashboard v1</p>
+                                        <p>Clientes</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -154,7 +155,7 @@
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1>Fixed Layout</h1>
+                            <h1 class="box-title">Fixed Layout</h1>
                         </div>
                         <!-- <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
@@ -176,7 +177,7 @@
                             <!-- Default box -->
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Title</h3>
+                                    <h3 class="card-title box-title" >Title</h3>
 
                                     <div class="card-tools">
                                         <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -188,7 +189,7 @@
                                     </div>
                                 </div>
                                 <div class="card-body">
-                                    Start creating your amazing application!
+                                   <div class="ajax_response"></div>
                                 </div>
                                 <!-- /.card-body -->
                                 <div class="card-footer">
@@ -234,6 +235,9 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- peticiones -->
     <script src="../../dist/js/pages/dash.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="//cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
 </body>
 
 </html>
